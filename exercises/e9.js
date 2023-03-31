@@ -1,4 +1,5 @@
 import { data } from "../data/data";
+import { getPlanetsNamesWithMoons } from "./e7";
 
 // SPACE DATA EXERCISE 9
 // Return the data object of the planet "Earth"
@@ -6,9 +7,10 @@ import { data } from "../data/data";
 
 export function getEarthData(data) {
   // Your code goes here...
+  const earth = data.planets.find((planet) => planet.id === "earth");
+  return earth;
 }
-
-
+console.log(getEarthData(data));
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-9"

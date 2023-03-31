@@ -5,10 +5,14 @@ import { data } from "../data/data";
 // Return example: 234234.234
 
 export function getOrbitalPeriodsSum(data) {
-  // Your code goes here...
+  const orbitals = data.asteroids.map((asteroid) => asteroid.orbitalPeriod);
+  const totalAverage = orbitals.reduce(
+    (accumulator, currentValue) => accumulator + currentValue
+  );
+  return totalAverage;
 }
 
-
+console.log(getOrbitalPeriodsSum(data));
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-14"

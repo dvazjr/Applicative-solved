@@ -6,9 +6,11 @@ import { data } from "../data/data";
 
 export function getAsteroidNames(data) {
   // Your code goes here...
+  return data.asteroids.map((asteroid) => {
+    return asteroid.name;
+  });
 }
-
-
+console.log(getAsteroidNames(data));
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-2"

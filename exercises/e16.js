@@ -9,13 +9,12 @@
  */
 
 export function find(array, callback) {
-  const returnArray = [];
-  for (let item of array) {
-    if (callback(item)) {
-      returnArray.push(item);
+  for (let i = 0; i < array.length; i++) {
+    if (callback(array[i], i, array)) {
+      return array[i];
     }
   }
-  return returnArray.length > 0 ? returnArray[0] : undefined;
+  return undefined;
 }
 
 // === TEST YOURSELF ===
